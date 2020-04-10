@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 35rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./imgs/background.jpg) no-repeat;
+  background-size: 100%;
+}
+body {
+  background-image: linear-gradient(to bottom, black, #1c1c1c);
+}
+
+.middle {
+  margin: auto;
+}
+
+.main h1 {
+  font-size: 6rem;
+  font-family: "Abril Fatface", cursive;
+  color: whitesmoke;
+  letter-spacing: 4px;
+  padding: 2rem;
+  animation: tracking-in-expand 1s;
+  animation-name: tracking-in-expand;
+}
+
+.button {
+  padding-top: 2rem;
+  padding-left: 90vh;
+  display: block;
+}
+button {
+  width: 8rem;
+  font-size: 1rem;
+  color: #c4660e;
+  border: #c4660e double 4px;
+  font-family: "Abril Fatface", cursive;
+  padding: 0.7rem;
+  background-color: transparent;
+  display: block;
+}
+
+.container {
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+
+.middle h2 {
+  color: white;
+  font-size: 2rem;
+  color: #cccbc4;
+  font-family: "Crimson Text", serif;
+  text-align: right;
+  padding: 5rem;
+}
+
+.imgs img {
+  width: 100%;
+  height: 300px;
+}
+
+.imgs {
+  margin: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 0.3rem;
+  column-gap: 0.3rem;
+}
+
+.imgs:hover {
+  cursor: pointer;
+}
+
+p {
+  color: white;
+  padding-top: 1rem;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
