@@ -5,7 +5,15 @@ const main = document.getElementById("main");
 
 imgs[0].style.opacity = opc;
 
-main;
+
+
+main.addEventListener("click", mainClick);
+
+function mainClick(e) {
+    imgs.forEach(function (main) {
+      return (main.style.opacity = 1);
+    });
+    
 
 imgs.forEach(function (img) {
   img.addEventListener("click", imgClick);
