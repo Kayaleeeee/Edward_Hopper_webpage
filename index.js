@@ -2,18 +2,16 @@ const current = document.getElementById("current");
 const imgs = document.querySelectorAll(".imgs img");
 const opc = 0.4;
 const main = document.getElementById("main");
+const intro = document.getElementById("intro");
+const box = document.getElementById("box");
+const exp = document.getElementById("exp");
 
 imgs[0].style.opacity = opc;
 
-
-
-main.addEventListener("click", mainClick);
-
 function mainClick(e) {
-    imgs.forEach(function (main) {
-      return (main.style.opacity = 1);
-    });
-    
+  main.classList.add("tracking-in-expand");
+}
+main.addEventListener("click", mainClick);
 
 imgs.forEach(function (img) {
   img.addEventListener("click", imgClick);
@@ -26,10 +24,23 @@ function imgClick(e) {
 
   current.src = e.target.src;
   current.classList.add("fade-in");
+  exp.innerText = e.target.id;
 
   setTimeout(function () {
     current.classList.remove("fade-in");
   }, 500);
 
   e.target.style.opacity = opc;
+}
+
+intro.addEventListener("click", showBox);
+function showBox() {
+  box.style.display = "block";
+  intro.style.display = "none";
+}
+
+box.addEventListener("click", clearBox);
+function clearBox(e) {
+  box.style.display = "none";
+  intro.style.display = "flex";
 }
