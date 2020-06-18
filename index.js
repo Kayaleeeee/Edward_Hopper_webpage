@@ -36,6 +36,7 @@ function imgClick(e) {
 intro.addEventListener("click", showBox);
 function showBox() {
   box.style.display = "block";
+  box.classList.add("tracking-in-expand");
   intro.style.display = "none";
 }
 

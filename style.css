@@ -59,6 +59,16 @@ button {
   background-color: transparent;
   display: block;
 }
+button:hover {
+  transition: ease-in 0.3s;
+  color: white;
+  background-color: #c4660e;
+  width: 8.5rem;
+}
+
+a {
+  text-decoration: none;
+}
 
 .edward {
   display: flex;
@@ -71,8 +81,8 @@ button {
 
 #box {
   display: none;
-  width: 350px;
-  height: 350px;
+  width: 30vw;
+  height: 50vh;
   background-color: gray;
   opacity: 0.8;
   margin-top: 15px;
